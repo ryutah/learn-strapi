@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "develop": "./node_modules/.bin/eleventy --serve",
+    "build": "./node_modules/.bin/eleventy"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

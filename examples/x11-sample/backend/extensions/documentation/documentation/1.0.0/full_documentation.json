@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/28/2021 4:29:06 PM"
+    "x-generation-date": "11/28/2021 4:48:00 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3662,7 +3662,8 @@
     "schemas": {
       "Articles": {
         "required": [
-          "id"
+          "id",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -3670,7 +3671,9 @@
           },
           "category": {
             "required": [
-              "id"
+              "id",
+              "header",
+              "slug"
             ],
             "properties": {
               "id": {
@@ -3678,6 +3681,9 @@
               },
               "header": {
                 "type": "string"
+              },
+              "slug": {
+                "type": "uid"
               },
               "published_at": {
                 "type": "string"
@@ -3696,6 +3702,9 @@
           "contents": {
             "type": "string"
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3703,6 +3712,9 @@
         }
       },
       "NewArticles": {
+        "required": [
+          "slug"
+        ],
         "properties": {
           "category": {
             "type": "string"
@@ -3712,6 +3724,9 @@
           },
           "contents": {
             "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -3727,7 +3742,9 @@
       },
       "Category": {
         "required": [
-          "id"
+          "id",
+          "header",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -3736,6 +3753,9 @@
           "header": {
             "type": "string"
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3743,9 +3763,16 @@
         }
       },
       "NewCategory": {
+        "required": [
+          "header",
+          "slug"
+        ],
         "properties": {
           "header": {
             "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

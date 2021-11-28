@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "Articles"
+    "name": "Articles",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,6 +20,11 @@
     },
     "contents": {
       "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "header",
+      "required": true
     }
   }
 }

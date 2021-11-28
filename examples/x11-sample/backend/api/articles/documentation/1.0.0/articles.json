@@ -516,7 +516,8 @@
     "schemas": {
       "Articles": {
         "required": [
-          "id"
+          "id",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -524,7 +525,9 @@
           },
           "category": {
             "required": [
-              "id"
+              "id",
+              "header",
+              "slug"
             ],
             "properties": {
               "id": {
@@ -532,6 +535,9 @@
               },
               "header": {
                 "type": "string"
+              },
+              "slug": {
+                "type": "uid"
               },
               "published_at": {
                 "type": "string"
@@ -550,6 +556,9 @@
           "contents": {
             "type": "string"
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -557,6 +566,9 @@
         }
       },
       "NewArticles": {
+        "required": [
+          "slug"
+        ],
         "properties": {
           "category": {
             "type": "string"
@@ -566,6 +578,9 @@
           },
           "contents": {
             "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

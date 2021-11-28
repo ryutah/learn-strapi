@@ -573,7 +573,9 @@
     "schemas": {
       "Category": {
         "required": [
-          "id"
+          "id",
+          "header",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -582,6 +584,9 @@
           "header": {
             "type": "string"
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -589,9 +594,16 @@
         }
       },
       "NewCategory": {
+        "required": [
+          "header",
+          "slug"
+        ],
         "properties": {
           "header": {
             "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

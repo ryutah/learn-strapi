@@ -6,3 +6,5 @@ top:
 # Hello, World!!
 
 ## {{ index.header }}
+
+<a href="/categories">Category</a>
